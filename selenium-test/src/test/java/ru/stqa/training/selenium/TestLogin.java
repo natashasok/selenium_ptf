@@ -19,7 +19,7 @@ public class TestLogin {
     }
 
     @Test
-    public void myFirstTest() {
+    public void testLogin() {
         driver.get("http://localhost/litecart/admin/");
         driver.findElement(By.name("username")).sendKeys("admin");
         driver.findElement(By.name("password")).sendKeys("admin");
