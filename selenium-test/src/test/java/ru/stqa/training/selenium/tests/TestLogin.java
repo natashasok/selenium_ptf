@@ -1,4 +1,4 @@
-package ru.stqa.training.selenium;
+package ru.stqa.training.selenium.tests;
 
 import org.junit.After;
 import org.junit.Before;
@@ -20,9 +20,7 @@ import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.*;
 
-public class TestLogin {
-    private WebDriver driver;
-    private WebDriverWait wait;
+public class TestLogin extends TestBase{
 
     public boolean isElementPresent(WebDriver driver, By locator) {
         try {
@@ -35,16 +33,6 @@ public class TestLogin {
 
     public boolean areElementsPresent(WebDriver driver, By locator) {
         return driver.findElements(locator).size() > 0;
-    }
-
-    @Before
-    public void start(){
-        ChromeOptions options = new ChromeOptions();
-        //options.addArguments("start-fullscreen");
-        driver = new ChromeDriver(options);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        //driver = new InternetExplorerDriver();
-        wait = new WebDriverWait(driver,30);
     }
 
     @Test
@@ -85,11 +73,4 @@ public class TestLogin {
 
     }
 
-
-
-    @After
-    public void stop(){
-        driver.quit();
-        driver = null;
-    }
 }

@@ -64,18 +64,23 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../java_pft_softwaretesting" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Gradle.TestSticker.testSticker">
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ru.stqa.training.selenium.tests" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.TestLogin.testLogin">
     <configuration name="TestLogin.testLogin" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/selenium-test" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ru.stqa.training.selenium.TestLogin.testLogin&quot;" />
+        <option name="scriptParameters" value="--tests &quot;ru.stqa.training.selenium.tests.TestLogin.testLogin&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -113,7 +118,7 @@
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/selenium-test" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ru.stqa.training.selenium.TestSticker.testSticker&quot;" />
+        <option name="scriptParameters" value="--tests &quot;ru.stqa.training.selenium.tests.TestSticker.testSticker&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -167,11 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.TestLogin.testLogin" />
+        <item itemvalue="Gradle.TestSticker.testSticker" />
+        <item itemvalue="Gradle.TestLogin.testLogin" />
         <item itemvalue="Gradle.TestSticker.testSticker" />
         <item itemvalue="Gradle.TestSticker" />
-        <item itemvalue="Gradle.TestStiсker" />
-        <item itemvalue="Gradle.TestStiсker.testSticker" />
-        <item itemvalue="Gradle.TestLogin.testLogin" />
       </list>
     </recent_temporary>
   </component>
@@ -209,31 +214,39 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="84" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1590076888530" />
-    <state x="592" y="209" key="FileChooserDialogImpl" timestamp="1587990771136">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="603" y="434" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1590096476645">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="603" y="434" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590096476645" />
+    <state x="743" y="389" width="620" height="270" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1590096487726">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="743" y="389" width="620" height="270" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1590096487726" />
+    <state x="740" y="264" key="FileChooserDialogImpl" timestamp="1590096158170">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="592" y="209" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1587990771136" />
-    <state x="740" y="264" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1587976512018" />
-    <state width="1877" height="370" key="GridCell.Tab.0.bottom" timestamp="1590077516141">
+    <state x="740" y="264" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1590096158170" />
+    <state width="1877" height="370" key="GridCell.Tab.0.bottom" timestamp="1590097190896">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="370" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589985975262" />
-    <state width="1877" height="370" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590077516141" />
-    <state width="1877" height="370" key="GridCell.Tab.0.center" timestamp="1590077516140">
+    <state width="1877" height="370" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590097190896" />
+    <state width="1877" height="370" key="GridCell.Tab.0.center" timestamp="1590097190896">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="370" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589985975262" />
-    <state width="1877" height="370" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590077516140" />
-    <state width="1877" height="370" key="GridCell.Tab.0.left" timestamp="1590077516140">
+    <state width="1877" height="370" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590097190896" />
+    <state width="1877" height="370" key="GridCell.Tab.0.left" timestamp="1590097190896">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="370" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589985975262" />
-    <state width="1877" height="370" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590077516140" />
-    <state width="1877" height="370" key="GridCell.Tab.0.right" timestamp="1590077516140">
+    <state width="1877" height="370" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590097190896" />
+    <state width="1877" height="370" key="GridCell.Tab.0.right" timestamp="1590097190896">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="370" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589985975262" />
-    <state width="1877" height="370" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590077516140" />
+    <state width="1877" height="370" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590097190896" />
     <state width="1877" height="332" key="GridCell.Tab.1.bottom" timestamp="1589877738894">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -263,9 +276,17 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/selenium-test/src/test/java/ru/stqa/training/selenium/TestLogin.java</url>
+          <url>file://$PROJECT_DIR$/selenium-test/src/test/java/ru/stqa/training/selenium/tests/TestLogin.java</url>
           <line>61</line>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/selenium-test/src/test/java/ru/stqa/training/selenium/tests/TestSticker.java</url>
+          <line>32</line>
+          <properties class="ru.stqa.training.selenium.tests.TestSticker" method="testSticker">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
