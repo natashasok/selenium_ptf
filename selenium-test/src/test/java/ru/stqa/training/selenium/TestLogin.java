@@ -54,6 +54,9 @@ public class TestLogin {
         driver.findElement(By.name("password")).sendKeys("admin");
         driver.findElement(By.name("login")).click();
         wait = new WebDriverWait(driver,30);
+
+
+
         List<WebElement> elementList= driver.findElements(By.cssSelector("li[id=app-]>a"));
       List<String> listLink = new ArrayList<>();
         for (WebElement e: elementList) {
@@ -73,7 +76,7 @@ public class TestLogin {
                     System.out.println(e.getText());
                 }
                 for ( String l2: listLink2){
-                    driver.findElement(By.cssSelector("span[class=name'"+ l2 +"']")).click();
+                    driver.findElement(By.xpath("//span[contains(@class,'name') and contains(text(), '"+ l2 +"')]")).click();
                 }
 
             }else System.out.println("ne ok");
