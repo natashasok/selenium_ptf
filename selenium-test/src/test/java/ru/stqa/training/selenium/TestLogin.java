@@ -12,13 +12,13 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import sun.rmi.log.LogInputStream;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class TestLogin {
     private WebDriver driver;
@@ -31,6 +31,10 @@ public class TestLogin {
         } catch (NoSuchElementException ex) {
             return false;
         }
+    }
+
+    public boolean areElementsPresent(WebDriver driver, By locator) {
+        return driver.findElements(locator).size() > 0;
     }
 
     @Before
@@ -58,20 +62,21 @@ public class TestLogin {
 
         }
         for ( String l: listLink){
-            driver.findElement(By.cssSelector(String.format("a[href='"+ l +"']"))).click();
-            if (isElementPresent(driver, By.cssSelector("li[class=selected] li"))) {
-                System.out.println("есть");
-                /*List<WebElement> elementIn =driver.findElements(By.cssSelector("li[id=app-.class=selected] li"));
+            driver.findElement(By.cssSelector("a[href='"+ l +"']")).click();
+            if (areElementsPresent(driver, By.cssSelector("li[class=selected] li"))) {
+                System.out.println("ok");
+                List<WebElement> elementIn =driver.findElements(By.cssSelector("li[class=selected] li"));
+
                 List<String> listLink2 = new ArrayList<>();
                 for (WebElement e: elementIn) {
-                    listLink2.add(e.getAttribute("href"));
-                    System.out.println(e.getAttribute("href"));
+                    listLink2.add(e.getText());
+                    System.out.println(e.getText());
                 }
-                /*for ( String l2: listLink2){
-                    driver.findElement(By.cssSelector(String.format("a[href='"+ l2 +"']"))).click();
-                } */
+                for ( String l2: listLink2){
+                    driver.findElement(By.cssSelector("span[class=name'"+ l2 +"']")).click();
+                }
 
-            }else System.out.println("нет");
+            }else System.out.println("ne ok");
             assertTrue(isElementPresent(driver, By.cssSelector("td[id=content]>h1")));
         }
 
