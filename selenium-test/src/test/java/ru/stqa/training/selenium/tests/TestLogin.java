@@ -37,14 +37,7 @@ public class TestLogin extends TestBase{
 
     @Test
     public void testLogin() {
-        driver.get("http://localhost/litecart/admin/");
-        driver.findElement(By.name("username")).sendKeys("admin");
-        driver.findElement(By.name("password")).sendKeys("admin");
-        driver.findElement(By.name("login")).click();
-        wait = new WebDriverWait(driver,30);
-
-
-
+        loginAdmin();
         List<WebElement> elementList= driver.findElements(By.cssSelector("li[id=app-]>a"));
       List<String> listLink = new ArrayList<>();
         for (WebElement e: elementList) {

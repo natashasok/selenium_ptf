@@ -2,6 +2,7 @@ package ru.stqa.training.selenium.tests;
 
 import org.junit.After;
 import org.junit.Before;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -28,5 +29,13 @@ public class TestBase {
         driver.quit();
         driver = null;
         System.out.println("after");
+    }
+
+    public void loginAdmin(){
+        driver.get("http://localhost/litecart/admin/");
+        driver.findElement(By.name("username")).sendKeys("admin");
+        driver.findElement(By.name("password")).sendKeys("admin");
+        driver.findElement(By.name("login")).click();
+        wait = new WebDriverWait(driver,30);
     }
 }
