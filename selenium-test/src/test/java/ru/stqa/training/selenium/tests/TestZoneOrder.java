@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.junit.Assert.assertTrue;
+
 public class TestZoneOrder extends TestBase{
     @Test
     public void testZoneOrder(){
@@ -20,13 +22,11 @@ public class TestZoneOrder extends TestBase{
        for(String c: country){
             driver.get(""+c+"");
             List<WebElement> zone_country1 = driver.findElements(By.xpath("//table[contains(@class,'dataTable')]//td[3]"));
+           List<String> country_selected = new ArrayList<>();
            for (WebElement z: zone_country1) {
-               System.out.println(z.findElement(By.xpath("select/option")).getAttribute("text"));
-             //  if (z.findElement(By.xpath("./select/option")).getAttribute("selected").equals("true")){
-            //       System.out.println(z.findElement(By.xpath("./select/option")).getAttribute("textContent"));
-             //  }
-
+               country_selected.add(z.findElement(By.xpath("select/option[@selected]")).getAttribute("text"));
           }
+           assertTrue(sort((ArrayList) country_selected));
         }
 
     }
