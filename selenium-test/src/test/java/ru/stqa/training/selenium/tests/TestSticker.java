@@ -32,9 +32,9 @@ public class TestSticker extends TestBase {
     @Test
     public void testSticker() {
         driver.get("http://localhost/litecart/en/");
-        List<WebElement> ducks = driver.findElements(By.cssSelector("li[class='product column shadow hover-light']"));
+        List<WebElement> ducks = driver.findElements(By.cssSelector(".product"));
         for (WebElement e: ducks) {
-            assertTrue(isElementPresent(driver,By.cssSelector("div[class*='sticker']")));
+            assertTrue(isElementPresent(driver,By.cssSelector("div.sticker")));
         }
     }
 

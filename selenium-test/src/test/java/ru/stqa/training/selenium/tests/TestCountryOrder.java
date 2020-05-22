@@ -24,9 +24,9 @@ public class TestCountryOrder extends TestBase {
             if (!c.getAttribute("title").equals("Edit")){
                country_name.add(c.getAttribute("textContent"));
             }
-            if (){
-                country_zone.add(c.getAttribute("textContent"));
-            }
+            //if (){
+             //   country_zone.add(c.getAttribute("textContent"));
+           // }
         }
         ArrayList<String> sortedList = (ArrayList<String>) country_name;
         Collections.sort(sortedList);
