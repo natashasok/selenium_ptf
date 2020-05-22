@@ -27,22 +27,22 @@ public class TestCountryOrder extends TestBase {
         driver.get("http://localhost/litecart/admin/?app=countries&doc=countries");
         List<String> country_name = new ArrayList<>();
         List<String> country_zone = new ArrayList<>();
-        List<WebElement> country = driver.findElements(By.cssSelector("tr[class=row] a"));
+        List<WebElement> country = driver.findElements(By.cssSelector("tr[class=row]"));
         for(WebElement c: country) {
-
-            if (!c.getAttribute("title").equals("Edit")){
-               country_name.add(c.getAttribute("textContent"));
-            }
-            //if (!c.getAttribute("title").equals("0")){
-             //   country_zone.add(c.getAttribute("textContent"));
+            //driver.findElement(By.xpath("//td/a[not(contains(@title, 'Edit'))]")).getAttribute("textContent");
+            //if (!c.getAttribute("title").equals("Edit")){
+              country_name.add(c.findElement(By.xpath("./td/a[not(contains(@title, 'Edit'))]")).getAttribute("textContent"));
            // }
         }
-
-
-        //List sortedList = new ArrayList(country_name);
-        //Collections.sort(sortedList);
         assertTrue(sort((ArrayList) country_name));
-
+        for (int i=0; i<country_name.size(); i++){
+            System.out.println(country_name.get(i));
+        }
+       // for(WebElement c: country) {
+      //      driver.findElements(By.cssSelector(""));
+      //  }
+        //row[not(contains(title,'Edit'))]
+        // $x ("//tr[contains(@class,'row')]/td/a[not(contains(@title, 'Edit'))]")
 
     }
 
