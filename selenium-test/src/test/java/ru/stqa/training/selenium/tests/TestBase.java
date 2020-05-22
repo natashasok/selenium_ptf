@@ -8,6 +8,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class TestBase {
@@ -37,5 +40,11 @@ public class TestBase {
         driver.findElement(By.name("password")).sendKeys("admin");
         driver.findElement(By.name("login")).click();
         wait = new WebDriverWait(driver,30);
+    }
+    public boolean sort(ArrayList list) {
+        List sortedList = new ArrayList(list);
+        Collections.sort(sortedList);
+        boolean sorted = sortedList.equals(list);
+        return sorted;
     }
 }

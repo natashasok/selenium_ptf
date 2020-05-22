@@ -8,13 +8,6 @@ import java.util.List;
 import static org.junit.Assert.assertTrue;
 public class TestCountryOrder extends TestBase {
 
-    public boolean sort(ArrayList list) {
-        List sortedList = new ArrayList(list);
-        Collections.sort(sortedList);
-        boolean sorted = sortedList.equals(list);
-        return sorted;
-    }
-
     @Test
       public void testCountryOrder(){
         loginAdmin();
@@ -42,6 +35,7 @@ public class TestCountryOrder extends TestBase {
             }
             assertTrue(sort((ArrayList) country_on_zone_name));
         }
+
 
         // $x ("//tr[contains(@class,'row')]/td/a[not(contains(@title, 'Edit'))]")
         // $x ("//table[contains(@id,'table-zones')]//td[3]")
