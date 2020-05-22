@@ -232,26 +232,26 @@
     </state>
     <state x="592" y="209" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1587990771136" />
     <state x="740" y="264" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1590096158170" />
-    <state width="1877" height="370" key="GridCell.Tab.0.bottom" timestamp="1590159153605">
+    <state width="1877" height="370" key="GridCell.Tab.0.bottom" timestamp="1590159903987">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="370" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589985975262" />
-    <state width="1877" height="370" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590159153605" />
-    <state width="1877" height="370" key="GridCell.Tab.0.center" timestamp="1590159153605">
+    <state width="1877" height="370" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590159903987" />
+    <state width="1877" height="370" key="GridCell.Tab.0.center" timestamp="1590159903987">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="370" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589985975262" />
-    <state width="1877" height="370" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590159153605" />
-    <state width="1877" height="370" key="GridCell.Tab.0.left" timestamp="1590159153605">
+    <state width="1877" height="370" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590159903987" />
+    <state width="1877" height="370" key="GridCell.Tab.0.left" timestamp="1590159903987">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="370" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589985975262" />
-    <state width="1877" height="370" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590159153605" />
-    <state width="1877" height="370" key="GridCell.Tab.0.right" timestamp="1590159153605">
+    <state width="1877" height="370" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590159903987" />
+    <state width="1877" height="370" key="GridCell.Tab.0.right" timestamp="1590159903987">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="370" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589985975262" />
-    <state width="1877" height="370" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590159153605" />
+    <state width="1877" height="370" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590159903987" />
     <state width="1877" height="332" key="GridCell.Tab.1.bottom" timestamp="1590101927246">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -287,7 +287,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/selenium-test/src/test/java/ru/stqa/training/selenium/tests/TestCountryOrder.java</url>
-          <line>31</line>
+          <line>24</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
@@ -300,7 +300,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/selenium-test/src/test/java/ru/stqa/training/selenium/tests/TestCountryOrder.java</url>
-          <line>24</line>
+          <line>18</line>
           <properties class="ru.stqa.training.selenium.tests.TestCountryOrder" method="testCountryOrder">
             <option name="EMULATED" value="true" />
           </properties>
