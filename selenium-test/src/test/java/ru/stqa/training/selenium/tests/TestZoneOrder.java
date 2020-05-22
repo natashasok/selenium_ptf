@@ -16,13 +16,16 @@ public class TestZoneOrder extends TestBase{
         List<String> country = new ArrayList<>();
         for(WebElement c: zone_country) {
             country.add(c.getAttribute("href"));
-            //System.out.println(c.getAttribute("href"));
         }
        for(String c: country){
             driver.get(""+c+"");
-            List<WebElement> zone_country1 = driver.findElements(By.xpath("//table[contains(@class,'dataTable')]//td[3]/select"));
+            List<WebElement> zone_country1 = driver.findElements(By.xpath("//table[contains(@class,'dataTable')]//td[3]"));
            for (WebElement z: zone_country1) {
-               System.out.println(z.getAttribute("textContent"));
+               System.out.println(z.findElement(By.xpath("select/option")).getAttribute("text"));
+             //  if (z.findElement(By.xpath("./select/option")).getAttribute("selected").equals("true")){
+            //       System.out.println(z.findElement(By.xpath("./select/option")).getAttribute("textContent"));
+             //  }
+
           }
         }
 
