@@ -24,8 +24,10 @@ public class TestProductSelection extends TestBase{
                         .withCampaignPrice(campaignPriceOnFirstPage.getAttribute("textContent"));
         regularPriceOnFirstPage.getCssValue("color")
                 .equals("rgba(119, 119, 119, 1)");
+        regularPriceOnFirstPage.getCssValue("text-decoration-line").equals("line-through");
         campaignPriceOnFirstPage.getCssValue("color")
                 .equals("rgba(204, 0, 0, 1)");
+        campaignPriceOnFirstPage.getCssValue("font-weight").equals("700");
         assertTrue(regularPriceOnFirstPage.getSize().getHeight() < campaignPriceOnFirstPage.getSize().getHeight());
         assertTrue(regularPriceOnFirstPage.getSize().getWidth() < campaignPriceOnFirstPage.getSize().getWidth());
         driver.findElement(By.cssSelector("[id=box-campaigns] a.link")).click();
@@ -38,8 +40,10 @@ public class TestProductSelection extends TestBase{
 
         regularPriceOnSecondPage.getCssValue("color")
                 .equals("rgba(102, 102, 102, 1)");
+        regularPriceOnSecondPage.getCssValue("text-decoration-line").equals("line-through");
         campaignPriceOnSecondPage.getCssValue("color")
                 .equals("rgba(204, 0, 0, 1)");
+        campaignPriceOnSecondPage.getCssValue("font-weight").equals("700");
         assertTrue(regularPriceOnSecondPage.getSize().getWidth()  < campaignPriceOnSecondPage.getSize().getWidth());
         assertTrue(regularPriceOnSecondPage.getSize().getHeight()  < campaignPriceOnSecondPage.getSize().getHeight());
 
