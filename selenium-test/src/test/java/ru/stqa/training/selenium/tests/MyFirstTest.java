@@ -22,10 +22,18 @@ public class MyFirstTest {
 
    @Test
    public void myFirstTest() {
-       driver.get("https://www.google.com/");
+       driver.get("");
+       driver.findElement(By.name("username")).sendKeys("admin");
+       driver.findElement(By.name("password")).sendKeys("admin");
+       driver.findElement(By.name("login")).click();
+       wait = new WebDriverWait(driver,30);
        driver.findElement(By.name("q")).sendKeys("webdriver");
        driver.findElement(By.name("btnK")).click();
        //wait.until(titleIs("webdriver - Поиск в Google"));
+       // "table.report-table tr:nth-child(1) > td:nth-child(3)"
+       //#apPivotTable1 > div.component-container > div > div:nth-child(2) > table > tbody > tr:nth-child(1) > td:nth-child(3)
+       //#apPivotTable1 > div.component-container > div > div:nth-child(2) > table > tbody > tr:nth-child(1)
+       //#apPivotTable1 > div.component-container > div > div:nth-child(2) > table > tbody > tr:nth-child(5)
    }
 
    @After
