@@ -32,7 +32,7 @@ public class TestBase {
         wait = new WebDriverWait(driver,5);
         System.out.println("before");
     }
-   // @After
+   @After
     public void stop(){
         driver.quit();
         driver = null;

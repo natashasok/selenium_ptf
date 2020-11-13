@@ -5,21 +5,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import javax.swing.*;
-import java.io.Console;
 import java.util.List;
 
-import static java.lang.Thread.sleep;
-import static org.junit.Assert.assertTrue;
 import static org.openqa.selenium.By.cssSelector;
-import static org.openqa.selenium.support.How.CSS;
 
 public class TestAddingToCart extends TestBase {
 
@@ -45,7 +37,7 @@ public class TestAddingToCart extends TestBase {
     }
 
     @Test
-    public void testAddingToCart() throws InterruptedException {
+    public void testAddingToCart() {
         wait = new WebDriverWait(driver, 5);
         driver.get("http://localhost/litecart/en/");
         int ducks_to_add = 3;
@@ -55,13 +47,10 @@ public class TestAddingToCart extends TestBase {
         for (int i = 0; i < ducks_to_add; i++) {
             waitUntilHome();
 
-//            wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector("[class='product column shadow hover-light'] [class='link']")));
             List<WebElement> products = driver.findElements(cssSelector("[class='product column shadow hover-light'] [class='link']"));
             wait.until(ExpectedConditions.visibilityOf(products.get(0)));
             WebElement button = wait.until(ExpectedConditions.elementToBeClickable(products.get(0)));
             button.click();
-//            Actions actions = new Actions(driver);
-//            actions.moveToElement(button).click(button).build().perform();
 
             wait.until(ExpectedConditions.visibilityOf(driver.findElement(add_cart_css)));
             if (isElementPresent(driver, By.name("options[Size]"))) {
@@ -79,24 +68,19 @@ public class TestAddingToCart extends TestBase {
 
         waitUntilHome();
 
-//        Thread.sleep(1000);
 
         By checkout = By.xpath("//*[contains(@class,'link') and contains(.,'Checkout')]");
         wait.until(ExpectedConditions.visibilityOfElementLocated(checkout));
         WebElement btnCheckout = wait.until(ExpectedConditions.elementToBeClickable(checkout));
         new Actions(driver).moveToElement(btnCheckout).click(btnCheckout).build().perform();
-//        btnCheckout.click();
 
         wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("[class='dataTable rounded-corners']")));
 
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[class='dataTable rounded-corners']")));
-//        Thread.sleep(1000);
 
         List<WebElement> trs = driver.findElements(By.xpath("//*[contains(@class,'dataTable ')]//td[contains(.,'Duck')]/.."));
         int count = trs.size();
 
-//        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector("[class^='shortcut'] li a img")));
-//        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector("[class^='shortcut'] li a img")));
+
         List<WebElement> shortcuts = driver.findElements(By.cssSelector("[class^='shortcut'] a"));
         if (shortcuts.size() > 0) {
             WebElement btnShortcut = wait.until(ExpectedConditions.elementToBeClickable(shortcuts.get(0)));
