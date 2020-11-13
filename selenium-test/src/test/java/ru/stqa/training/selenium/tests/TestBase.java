@@ -6,6 +6,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.ArrayList;
@@ -17,17 +19,20 @@ public class TestBase {
 
     WebDriver driver;
     WebDriverWait wait;
+
     @Before
     public void start(){
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability(CapabilityType.PAGE_LOAD_STRATEGY, "normal");
         ChromeOptions options = new ChromeOptions();
         //options.addArguments("start-fullscreen");
-        driver = new ChromeDriver(options);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver = new ChromeDriver(capabilities);
+//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         //driver = new InternetExplorerDriver();
-        wait = new WebDriverWait(driver,30);
+        wait = new WebDriverWait(driver,5);
         System.out.println("before");
     }
-    @After
+   // @After
     public void stop(){
         driver.quit();
         driver = null;
